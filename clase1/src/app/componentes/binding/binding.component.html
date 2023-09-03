@@ -1,0 +1,21 @@
+<p>binding works!</p>
+
+<!-- {{}} Interpolation c->v 
+-->
+
+
+<!-- A continuacion tipos de bindeo (ver atributos, funciones, etc un proyecto a otro) -->
+<h1>Nombre {{name}}</h1> <!-- {{}} - Interpolation controlador -> vista  -->
+
+<!--                                    (click) = onClick -> funcion por defecto del boton -->
+<input type="button" [value]="btnLabel" (click)="onClick($event)"> <!-- [] - Property Binding c -> v -->
+<!-- el value va a buscar la info que necesita a la propiedad llamada btnLabel -->
+<!-- () - Event Binding v -> c -->
+<!-- el evento (click) va a buscar al metodo onClick y ejecutar su funcion, $event es el evento nativo que contiene toda la data se lo pasamos a la funcion  -->
+
+<!-- [()] - To Way Binding  v<->c  -->
+<!-- el () bindea el atributo apellido y el [] bindea el evento, pero necesitarias un manejador entonces ngModel se encarga de hacerlo todo automaticamente -->
+<input type="text" [(ngModel)]="apellido" placeholder="Ingrese apellido">
+
+<hr>
+<h2>{{apellido}}</h2>
